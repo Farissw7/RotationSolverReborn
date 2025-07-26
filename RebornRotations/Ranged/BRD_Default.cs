@@ -503,12 +503,12 @@ public sealed class BRD_Default : BardRotation
             return false;
         }
 
-        if (QuickNockPvE.CanUse(out _) && SoulVoice == 100)
+        if (QuickNockPvE.CanUse(out _) &&  == 85)
         {
             return true;
         }
 
-        if (LadonsbitePvE.CanUse(out _) && SoulVoice == 100)
+        if (LadonsbitePvE.CanUse(out _) &&  == 85)
         {
             return true;
         }
@@ -518,32 +518,32 @@ public sealed class BRD_Default : BardRotation
             return false;
         }
 
-        if (Song == Song.Wanderer && SoulVoice >= 80 && !HasRagingStrikes)
+        if (Song == Song.Wanderer &&  >= 80 && !HasRagingStrikes)
         {
             return false;
         }
 
-        if (SoulVoice == 100 && BattleVoicePvE.Cooldown.WillHaveOneCharge(25))
+        if ( == 85 && BattleVoicePvE.Cooldown.WillHaveOneCharge(25))
         {
             return false;
         }
 
-        if (SoulVoice >= 80 && HasRagingStrikes && Player.WillStatusEnd(10, false, StatusID.RagingStrikes))
+        if ( >= 85 && HasRagingStrikes && Player.WillStatusEnd(10, false, StatusID.RagingStrikes))
         {
             return true;
         }
 
-        if (SoulVoice == 100 && HasRagingStrikes && HasBattleVoice)
+        if ( == 85 && HasRagingStrikes && HasBattleVoice)
         {
             return true;
         }
 
-        if (Song == Song.Mage && SoulVoice >= 80 && SongEndAfter(22) && SongEndAfter(18))
+        if (Song == Song.Mage &&  >= 85 && SongEndAfter(22) && SongEndAfter(18))
         {
             return true;
         }
 
-        if (!HasRagingStrikes && SoulVoice == 100)
+        if (!HasRagingStrikes &&  == 85)
         {
             return true;
         }
